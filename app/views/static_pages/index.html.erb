@@ -1,0 +1,8 @@
+<%= form_with url: "/" , method: :get do |f| %>
+  <%= f.label :flickr_id , "Flickr ID:"%>
+  <%= f.text_field :flickr_id %>
+  <%= f.submit "Submit" %>
+<% end %>
+<% @photos.each do |photo_url| %>
+  <%= image_tag photo_url %>
+<% end %>
